@@ -1,0 +1,144 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(images/Premium\ Vector\ _\ Abstract\ Circle\ Light\ Red\ Frame\ vector\ background.jpg);
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    opacity: 0.8;
+    position: relative;
+    width: 400px;
+     padding: 1px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(228, 198, 198, 0.5);
+}
+
+.neon-border {
+    position: relative;
+    padding: 20px;
+    background: #111;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.neon-border::before, .neon-border::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: red;
+    z-index: -1;
+    animation: animate 10s linear infinite;
+}
+
+.neon-border::after {
+    filter: blur(20px);
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+h2 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: red;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: rgb(243, 63, 63);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="neon-border">
+            <h2>Login</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Sign in</button>
+                <div class="links">
+                    <a href="#">Forgot Password</a>
+                    <a href="#">Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+    
+</body>
+</html>
